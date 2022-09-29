@@ -52,6 +52,6 @@ const newConnection = ref<PostgresConnection>({
 });
 
 const saveConnection = () => {
-  invoke("create_connection", newConnection.value).then(_ => showAddModal.value = false).catch(e=> console.log({e}));
+  invoke("create_connection", newConnection.value).then(_ => showAddModal.value = false);
 }
 </script>
